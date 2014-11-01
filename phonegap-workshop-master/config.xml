@@ -5,11 +5,13 @@
         Just an implementation of http://coenraets.org/blog/phonegap-tutorial/
     </description>
 	<author href="https://www.google.com/+JeffFinleyJabadeHut" email="jabad3hut@gmail.com">Jeff Finley</author>
-	<!--
-        If you do not want any permissions to be added to your app, add the
-        following tag to your config.xml; you will still have the INTERNET
-        permission on your app, which PhoneGap requires.
-    -->
+	
+	<!-- setting the device screen orientation to the default which will allow both landscape and portrait if the device is set to rotate -->
+	<preference name="orientation" value="default" />
+	<!-- setting the platforms that I want to build the apps for --> 
+	<gap:platform name="android"/>
+	<gap:platform name="winphone"/>
+	<!-- the features that I want to use -->
 	<feature name="http://api.phonegap.com/1.0/camera"/>
 	<feature name="http://api.phonegap.com/1.0/contacts"/>
 	<feature name="http://api.phonegap.com/1.0/file"/>
@@ -17,4 +19,9 @@
 	<feature name="http://api.phonegap.com/1.0/media"/>
 	<feature name="http://api.phonegap.com/1.0/network"/>
 	<feature name="http://api.phonegap.com/1.0/notification"/>
+	
+	<!--
+	      This allows your app to load assets from all domains
+	    -->
+	    <access origin="*" />
 </widget>
